@@ -13,5 +13,6 @@
 
 ln -sf "$DOTFILES/bash/.bashrc" ~/.bashrc
 ln -sf "$DOTFILES/bash/.bash_profile" ~/.bash_profile
+ln -sf .inputrc ~/.inputrc
 
 
