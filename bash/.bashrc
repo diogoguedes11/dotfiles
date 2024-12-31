@@ -92,12 +92,9 @@ alias scripts='cd $SCRIPTS'
 # Repos
 
 alias lab='cd $LAB'
-alias cks='cd $LAB/kubernetes/cks/'
-alias alab='cd $GHREPOS/azure-lab'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
-alias cdgo='cd $GHREPOS/go/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 
 alias c="clear"
@@ -119,22 +116,16 @@ alias t='tmux'
 alias e='exit'
 alias syu='sudo pacman -Syu'
 
-# Azure
 
-# git
+# ~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~
 alias gp='git push -f'
 alias gc='git commit -m'
 alias gs='git status'
+alias ga='git add .'
+alias gpull='git pull'
 alias lg='lazygit'
 
-# ricing
-alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
-alias ett='v ~/.config/awesome/themes/powerarrow-dark/theme-personal.lua'
-alias er='v ~/.config/awesome/rc.lua'
-alias eb='v ~/.bashrc'
-alias ev='cd ~/.config/nvim/ && v init.lua'
-alias sbr='source ~/.bashrc'
-alias s='startx'
+
 
 # vim & second brain
 alias in="cd \$ZETTELKASTEN/0 Inbox/"
@@ -170,24 +161,10 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 # search for a file with fzf and open it in vim
 alias vf='v $(fp)'
 
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  source "$HOME/.fzf.bash"
-  # echo "I'm on Mac!"
-
-  # brew bash completion
-  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-else
-  #	source /usr/share/fzf/key-bindings.bash
-  #	source /usr/share/fzf/completion.bash
-
-  # The first one worked on Ubuntu, the eval one on Fedora. Keeping for reference.
-  # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-  eval "$(fzf --bash)"
-fi
-
 # Only needed for npm install on WSL
 #export NVM_DIR="$HOME/.config/nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
