@@ -49,4 +49,3 @@ common_items=(
 
 create_directories "${common_directories[@]}"
 create_symlinks "${common_items[@]}"
-

@@ -1,0 +1,5 @@
+# open new terminal
+rcmd - return : alacritty
+
+# open password manager
+# cmd + alt - o : keepassxc
