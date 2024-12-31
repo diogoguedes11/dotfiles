@@ -1,4 +1,3 @@
-
 #
 # ~/.bashrc
 #
@@ -26,8 +25,7 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
-export ZETTELKASTEN="$HOME/Zettelkasten"
-
+export ZETTELKASTEN="$HOME/Zettelkasten/second-brain/"
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -76,7 +74,6 @@ fi
 #  eval "$(fzf --bash)"
 #fi
 
-
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
 eval "$(starship init bash)"
@@ -95,10 +92,7 @@ alias lab='cd $LAB'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
-alias rwdot='cd $REPOS/github.com/rwxrob/dot'
-
 alias c="clear"
-alias rob='cd $REPOS/github.com/rwxrob'
 alias homelab='cd $REPOS/github.com/mischavandenburg/homelab/'
 alias hl='homelab'
 alias cdq='cd $REPOS/github.com/jackyzha0/quartz'
@@ -109,13 +103,12 @@ alias ll='ls -la'
 alias la='ls -lathr'
 
 # finds all files recursively and sorts by last modification, ignore hidden files
-alias lastmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
+alias ld='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 alias sv='sudoedit'
 alias t='tmux'
 alias e='exit'
 alias syu='sudo pacman -Syu'
-
 
 # ~~~~~~~~~~~~ GIT ~~~~~~~~~~~~~~
 alias gp='git push -f'
@@ -125,17 +118,13 @@ alias ga='git add .'
 alias gpull='git pull'
 alias lg='lazygit'
 
-
-
 # vim & second brain
-alias in="cd \$ZETTELKASTEN/0 Inbox/"
+alias in="cd \$ZETTELKASTEN/Inbox/"
 alias zk="cd \$ZETTELKASTEN"
-
 
 # terraform
 alias tf='terraform'
 alias tp='terraform plan'
-
 
 # kubectl
 alias k='kubectl'
@@ -165,6 +154,5 @@ alias vf='v $(fp)'
 #export NVM_DIR="$HOME/.config/nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
