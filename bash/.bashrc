@@ -28,6 +28,7 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
 export ZETTELKASTEN="$HOME/Zettelkasten/second-brain/"
+export DEVFOLDER="$REPOS/Development/"
 
 # ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -88,16 +89,12 @@ alias v=nvim
 alias ..="cd .."
 alias scripts='cd $SCRIPTS'
 
-# Repos
-
-alias lab='cd $LAB'
+# Workflow
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
 alias c="clear"
-alias homelab='cd $REPOS/github.com/mischavandenburg/homelab/'
-alias hl='homelab'
-alias cdq='cd $REPOS/github.com/jackyzha0/quartz'
+alias d="cd $DEVFOLDER"
 
 # ls
 alias ls='ls --color=auto'

@@ -1,6 +1,6 @@
 #/bin/bash
 
-# Install packages
+# Install packages (MACOS version)
 
 brew install tmux
 
@@ -14,5 +14,6 @@ brew install neovim
 
 brew install k9s
 
+# Window manager
 brew install koekeishiya/formulae/skhd
 skhd --start-service
