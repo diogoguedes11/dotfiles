@@ -2,18 +2,25 @@
 
 # Install packages (MACOS version)
 
-brew install tmux
+MACOS_INFO=$OSTYPE
 
-brew install --cask alacritty
+if [[ -z $MACOS_INFO ]]; then
+  echo "Executing installer for Ubuntu..."
 
-# Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-
-brew install neovim
-
-brew install k9s
-
-# Window manager
-brew install koekeishiya/formulae/skhd
-skhd --start-service
+else
+  echo "Installing in MacOS"
+  # installing tmux
+  brew install tmux
+  # installing alacritty
+  brew install --cask alacritty
+  # Install fzf
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+  # installing neovim
+  brew install neovim
+  # installing neovim
+  brew install k9s
+  # Window manager
+  brew install koekeishiya/formulae/skhd
+  skhd --start-service
+fi
