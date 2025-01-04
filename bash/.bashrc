@@ -92,6 +92,7 @@ alias scripts='cd $SCRIPTS'
 # Workflow
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
+alias lab="cd $LAB"
 alias ghrepos='cd $GHREPOS'
 alias c="clear"
 alias d="cd $DEVFOLDER"
