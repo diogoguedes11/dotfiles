@@ -128,8 +128,6 @@ alias tp='terraform plan'
 
 # kubectl
 alias k='kubectl'
-source <(kubectl completion bash)
-complete -o default -F __start_kubectl k
 alias kgp='kubectl get pods'
 alias kc='kubectx'
 alias kn='kubens'
@@ -157,4 +155,7 @@ alias vf='v $(fp)'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-complete -C pomo pomo
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/diogoguedes/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+source <(kubectl completion bash)

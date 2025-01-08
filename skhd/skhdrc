@@ -1,1 +1,3 @@
-/Users/diogoguedes/Repos/github.com/diogobytes/dotfiles/skhdrc
+
+# open new terminal
+rcmd - return : alacritty
