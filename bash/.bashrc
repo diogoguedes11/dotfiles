@@ -22,7 +22,7 @@ export BROWSER="edge"
 
 # directories
 export REPOS="$HOME/Repos"
-export GITUSER="diogobytes"
+export GITUSER="diogoguedes11"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"

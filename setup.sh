@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/Repos/github.com/diogobytes/dotfiles"
+DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
 XDG_CONFIG_HOME="$HOME/.config"
 
 create_directories() {
@@ -43,8 +43,6 @@ common_items=(
   ".tmux.conf:$HOME/.tmux.conf"
   "nvim:$XDG_CONFIG_HOME/nvim"
   "skhdrc:$XDG_CONFIG_HOME/skhd/skhdrc"
-  ".zprofile:$HOME/.zprofile"
-  ".zshrc:$HOME/.zshrc"
 )
 
 create_directories "${common_directories[@]}"
