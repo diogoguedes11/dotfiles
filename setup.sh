@@ -3,6 +3,18 @@
 DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
 XDG_CONFIG_HOME="$HOME/.config"
 
+# Setting up necessary directories
+cd $DOTFILES_DIR/scripts
+
+chmod +x dirs.sh
+chmod +x apps.sh
+./dirs.sh
+./apps.sh
+
+# Setting up dotfiles links
+
+cd $DOTFILES_DIR
+
 ln -sf "$DOTFILES_DIR/bash/.bash_profile" "$HOME/.bash_profile"
 ln -sf "$DOTFILES_DIR/bash/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/bash/.inputrc" "$HOME/.inputrc"
