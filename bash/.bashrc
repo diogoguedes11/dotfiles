@@ -158,3 +158,5 @@ alias vf='v $(fp)'
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/diogoguedes/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+eval "$(starship init bash)"
