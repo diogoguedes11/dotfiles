@@ -160,3 +160,4 @@ export PATH="/Users/diogoguedes/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 eval "$(starship init bash)"
+eval "$(ssh-agent -s)"
