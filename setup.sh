@@ -1,8 +1,5 @@
 #!/bin/bash
 
-DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
-XDG_CONFIG_HOME="$HOME/.config"
-
 # Setting up necessary directories
 cd $DOTFILES_DIR/scripts
 
@@ -13,6 +10,8 @@ chmod +x apps.sh
 
 # Setting up dotfiles links
 
+DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
+XDG_CONFIG_HOME="$HOME/.config"
 cd $DOTFILES_DIR
 
 ln -sf "$DOTFILES_DIR/bash/.bash_profile" "$HOME/.bash_profile"
