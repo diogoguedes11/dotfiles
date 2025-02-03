@@ -1,26 +1,37 @@
 #!/bin/bash
 
 # Setting up necessary directories
-cd $DOTFILES_DIR/scripts
+XDG_CONFIG_HOME="$HOME/.config"
 
-chmod +x dirs.sh
-chmod +x apps.sh
+# Move into scripts folder
+cd scripts && chmod +x dirs.sh && chmod +x apps.sh
+# Execute scripts
 ./dirs.sh
 ./apps.sh
 
-# Setting up dotfiles links
+# Root dotfiles directory
+cd ../
 
-DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
-XDG_CONFIG_HOME="$HOME/.config"
-cd $DOTFILES_DIR
+dotfiles=(
+  .bash_profile,
+  .bashrc,
+  .inputrc,
+  .tmux.conf
+)
 
-ln -sf "$DOTFILES_DIR/bash/.bash_profile" "$HOME/.bash_profile"
-ln -sf "$DOTFILES_DIR/bash/.bashrc" "$HOME/.bashrc"
-ln -sf "$DOTFILES_DIR/bash/.inputrc" "$HOME/.inputrc"
-ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
-ln -sf "$DOTFILES_DIR/k9s" "$XDG_CONFIG_HOME/k9s"
-ln -sf "$DOTFILES_DIR/nvim" "$XDG_CONFIG_HOME/nvim"
-ln -sf "$DOTFILES_DIR/alacritty" "$XDG_CONFIG_HOME/alacritty"
-ln -sf "$DOTFILES_DIR/nvim" "$XDG_CONFIG_HOME/nvim"
-ln -sf "$DOTFILES_DIR/vim" "$XDG_CONFIG_HOME/vim"
-ln -sf "$DOTFILES_DIR/skhd" "$XDG_CONFIG_HOME/skhd"
+folders=(
+  k9s,
+  nvim,
+  alacritty,
+  nvim,
+  vim,
+  skhd
+)
+
+for file in "${dotfiles[@]}"; do
+  ln -sf "$DOTFILES_DIR/bash/$file" "$HOME/$file"
+done
+
+for folder in "${folders[@]}"; do
+  ln -sf "$DOTFILES_DIR/$folder" "$XDG_CONFIG_HOME/$folder"
+done
