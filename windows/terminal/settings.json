@@ -66,9 +66,9 @@
         "source": "Windows.Terminal.Azure"
       },
       {
-        "colorScheme": "Tokyo Night",
+        "colorScheme": "Gruvbox Dark",
         "font": {
-          "face": "UbuntuMono Nerd Font",
+          "face": "Cascadia Code",
           "size": 16
         },
         "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
@@ -112,6 +112,29 @@
       "selectionBackground": "#FFFFFF",
       "white": "#CCCCCC",
       "yellow": "#C19C00"
+    },
+    {
+      "background": "#282828",
+      "black": "#282828",
+      "blue": "#458588",
+      "brightBlack": "#928374",
+      "brightBlue": "#83A598",
+      "brightCyan": "#8EC07C",
+      "brightGreen": "#B8BB26",
+      "brightPurple": "#D3869B",
+      "brightRed": "#FB4934",
+      "brightWhite": "#EBDBB2",
+      "brightYellow": "#FABD2F",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#689D6A",
+      "foreground": "#EBDBB2",
+      "green": "#98971A",
+      "name": "Gruvbox Dark",
+      "purple": "#B16286",
+      "red": "#CC241D",
+      "selectionBackground": "#FFFFFF",
+      "white": "#A89984",
+      "yellow": "#D79921"
     },
     {
       "background": "#1A1B2C",
