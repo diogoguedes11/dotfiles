@@ -1,18 +1,38 @@
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    },
+  },
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "moon" },
+    opts = {
+      style = "moon",
+      styles = {
+        keywords = { italic = false },
+        functions = { italic = false },
+        variables = { italic = false, bold = true },
+        comments = { italic = false },
+      },
+    },
   },
-
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "gruvbox",
+      styles = {
+        keywords = { italic = false },
+        functions = { italic = false },
+        variables = { italic = false, bold = true },
+        comments = { italic = false },
+      },
     },
   },
 }
