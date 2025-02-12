@@ -26,6 +26,7 @@ export GITUSER="diogoguedes11"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
+export HOMELAB="$GHREPOS/homelab"
 export SCRIPTS="$DOTFILES/scripts"
 export ZETTELKASTEN="$HOME/Zettelkasten/second-brain/"
 export DEVFOLDER="$REPOS/Development/"
@@ -93,6 +94,7 @@ alias scripts='cd $SCRIPTS'
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
 alias lab="cd $LAB"
+alias homelab="cd $HOMELAB"
 alias ghrepos='cd $GHREPOS'
 alias c="clear"
 alias d="cd $DEVFOLDER"
@@ -133,8 +135,8 @@ alias kc='kubectx'
 alias kn='kubens'
 
 # flux
-#source <(flux completion bash)
-#alias fgk='flux get kustomizations'
+source <(flux completion bash)
+alias fgk='flux get kustomizations'
 
 # completions
 #source <(talosctl completion bash)
