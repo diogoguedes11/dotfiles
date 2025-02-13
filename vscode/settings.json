@@ -68,6 +68,6 @@
   "editor.wordWrap": "off",
   "extensions.ignoreRecommendations": true,
   "editor.guides.indentation": false,
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.activityBar.location": "hidden"
+  "workbench.colorTheme": "Carbonfox",
+  "workbench.iconTheme": "vscode-icons",
 }
