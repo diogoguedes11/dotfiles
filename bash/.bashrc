@@ -139,10 +139,10 @@ source <(flux completion bash)
 alias fgk='flux get kustomizations'
 
 # completions
-#source <(talosctl completion bash)
-#source <(kubectl-cnp completion bash)
-#source <(cilium completion bash)
-#source <(devpod completion bash)
+# source <(talosctl completion bash)
+# source <(kubectl-cnp completion bash)
+# source <(cilium completion bash)
+# source <(devpod completion bash)
 
 # fzf aliases
 # use fp to do a fzf search and preview the files
@@ -163,3 +163,7 @@ export PATH="/Users/diogoguedes/.rd/bin:$PATH"
 
 eval "$(starship init bash)"
 eval "$(ssh-agent -s)"
+
+source /usr/share/bash-completion/bash_completion
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k

@@ -35,4 +35,25 @@ return {
       },
     },
   },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      neotree = {
+        colorscheme = "rose-pine",
+        styles = {
+          keywords = { italic = false },
+          functions = { italic = false },
+          variables = { italic = false, bold = true },
+          comments = { italic = false },
+        },
+      },
+      colorscheme = "rose-pine",
+      styles = {
+        keywords = { italic = false },
+        functions = { italic = false },
+        variables = { italic = false, bold = true },
+        comments = { italic = false },
+      },
+    },
+  },
 }
