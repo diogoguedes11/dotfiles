@@ -1,0 +1,44 @@
+{
+  "[terraform]": {
+    "editor.formatOnSave": true
+  },
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#000000",
+    "editorWarning.background": "#000000",
+    "editorInfo.background": "#000000",
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "plaintext": true,
+    "markdown": true,
+  },
+  "github.copilot.advanced": {
+    "debug.useElectronFetcher": true
+  },
+  "editor.cursorWidth": 3,
+  "editor.cursorBlinking": "expand",
+  "glassit.alpha": 220,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "vscode-icons",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontFamily": "'MonoLisa Trial'",
+  "editor.lineHeight": 0,
+  "editor.defaultFormatter": "hashicorp.terraform",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "remote.extensionKind": {
+    "asvetliakov.vscode-neovim": [
+      "workspace"
+    ]
+  },
+  "terminal.integrated.fontFamily": "'Monolisa Trial'",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "editor.tabSize": 5
+}
