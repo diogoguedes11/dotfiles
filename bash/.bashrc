@@ -122,7 +122,7 @@ alias lg='lazygit'
 
 # vim & second brain
 alias in="cd \$ZETTELKASTEN/Inbox/"
-alias zk="cd \$ZETTELKASTEN"
+alias z="cd \$ZETTELKASTEN"
 
 # terraform
 alias tf='terraform'
@@ -168,3 +168,6 @@ source /usr/share/bash-completion/bash_completion
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 tmux
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
