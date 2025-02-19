@@ -1,25 +1,45 @@
+// Place your key bindings in this file to override the defaults
 [
-  {
-    "command": "vscode-neovim.send",
-    "key": "ctrl+u",
-    "when": "editorTextFocus",
-    "args": "<C-u>"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "ctrl+d",
-    "when": "editorTextFocus",
-    "args": "<C-d>"
-  },
   {
     "key": "alt+t",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
   {
-    "key": "ctrl+shift+[BracketRight]",
+    "key": "ctrl+oem_3",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+d",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-d>"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+u",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-u>"
+  },
+  {
+    "key": "space g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   }
-]
 
