@@ -19,8 +19,8 @@ if echo "$os" | grep -o "Ubuntu"; then
   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
   # tmux
   apt install tmux
-  # neovim
-  snap install nvim --classic
+  # vim
+  apt install vim
   # k9s
   brew install derailed/k9s/k9s
   # Install starship
@@ -36,8 +36,9 @@ if echo "$os" | grep -o "Arch"; then
   # kubernetes
   curl -lo "https://dl.k8s.io/release/$(curl -l -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-  # Neovim install
-  pacman -Syu neovim
+
+  # Vim install
+  pacman -Syu vim
 
   # install tmux
   pacman -Syu tmux
@@ -59,9 +60,9 @@ else
   # Install fzf
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
-  # installing neovim
-  brew install neovim
-  # installing neovim
+  # installing vim 
+  brew install vim 
+  # installing k9s 
   brew install k9s
   # Window manager
   brew install koekeishiya/formulae/skhd
