@@ -21,8 +21,6 @@ dotfiles=(
 
 folders=(
   k9s,
-  # nvim,
-  alacritty,
   nvim,
   vim,
   skhd
