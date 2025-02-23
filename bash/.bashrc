@@ -14,8 +14,8 @@ set -o vi
 bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export VISUAL=nvim
-export EDITOR=nvim
+export VISUAL=vim
+export EDITOR=vim
 
 # config
 export BROWSER="edge"
@@ -84,7 +84,7 @@ eval "$(starship init bash)"
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
-alias v=nvim
+alias v=vim
 
 # cd
 alias ..="cd .."
