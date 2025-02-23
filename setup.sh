@@ -21,7 +21,6 @@ dotfiles=(
 )
 
 folders=(
-  k9s
   vim
  # skhd
 )
