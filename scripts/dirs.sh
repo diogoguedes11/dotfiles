@@ -18,6 +18,7 @@ setup_development() {
   git clone https://github.com/diogoguedes11/dotfiles
   git clone git@github.com:diogoguedes11/lab.git
   git clone git@github.com:diogoguedes11/diogoguedes11.git
+  git clone git@github.com:diogoguedes11/homelab.git
   cd ~/Repos/Development/
   git clone git@github.com:diogoguedes11/cloud-projects.git
   cd ~
