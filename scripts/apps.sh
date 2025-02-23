@@ -25,6 +25,8 @@ if echo "$os" | grep -o "Ubuntu"; then
   brew install derailed/k9s/k9s
   # Install starship
   curl -sS https://starship.rs/install.sh | sh
+  # Obsidian
+  sudo snap install obsidian --classic
 fi
 else
   echo "Installing in MacOS"

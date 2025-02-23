@@ -17,5 +17,5 @@ fi
 export XDG_CONFIG_HOME="$HOME"/.config
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/diogoguedes/.rd/bin:$PATH"
+export PATH="/Users/diogo/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

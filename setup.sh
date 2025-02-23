@@ -2,28 +2,28 @@
 
 # Setting up necessary directories
 XDG_CONFIG_HOME="$HOME/.config"
+DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
 
 # Move into scripts folder
-cd scripts && chmod +x dirs.sh && chmod +x apps.sh
+#cd scripts && chmod +x dirs.sh && chmod +x apps.sh
 # Execute scripts
-./dirs.sh
-./apps.sh
+#./dirs.sh
+#./apps.sh
 
 # Root dotfiles directory
-cd ../
+#cd ../
 
 dotfiles=(
-  .bash_profile,
-  .bashrc,
-  .inputrc,
+  .bash_profile
+  .bashrc
+  .inputrc
   .tmux.conf
 )
 
 folders=(
-  k9s,
-  # nvim,
-  vim,
-  skhd
+  k9s
+  vim
+ # skhd
 )
 
 for file in "${dotfiles[@]}"; do
