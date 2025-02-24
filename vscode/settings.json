@@ -1,73 +1,124 @@
 {
-  "breadcrumbs.enabled": false,
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.fontSize": 17,
-  "editor.matchBrackets": "never",
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.overviewRulerBorder": false,
-  "editor.glyphMargin": false,
-  "editor.tokenColorCustomizations": {
-    "comments": "#2ea542",
+  "[terraform]": {
+    "editor.formatOnSave": true
   },
-  "editor.wordBasedSuggestions": "off",
-  "editor.acceptSuggestionOnEnter": "on",
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": false
+  "markdown-preview-github-styles.colorTheme": "dark",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "plaintext": true,
+    "markdown": true
   },
-  "editor.roundedSelection": false,
+  "github.copilot.advanced": {
+    "debug.useElectronFetcher": true
+  },
+  "terminal.integrated.defaultProfile.linux": "tmux",
+  "editor.cursorWidth": 3,
+  "editor.cursorBlinking": "expand",
+  "vsicons.dontShowNewVersionMessage": true,
+  "security.workspace.trust.enabled": true,
   "editor.minimap.enabled": false,
-  "editor.renderLineHighlight": "none",
-  "editor.cursorStyle": "block",
-  "editor.lineNumbers": "off",
-  "editor.cursorBlinking": "solid",
-  "editor.folding": false,
-  "editor.autoClosingBrackets": "never",
-  "editor.insertSpaces": false,
+  "workbench.iconTheme": "vscode-icons",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontFamily": "'FiraCode Nerd Font'",
+  "editor.lineHeight": 0,
+  "editor.defaultFormatter": "hashicorp.terraform",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "editor.formatOnSave": true,
-  "diffEditor.renderSideBySide": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "javascript.format.enable": false,
-  "window.closeWhenEmpty": true,
-  "diffEditor.renderIndicators": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "[json]": {
+  "notebook.formatOnSave.enabled": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "remote.extensionKind": {
+    "asvetliakov.vscode-neovim": ["workspace"]
+  },
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "editor.tabSize": 5,
+  "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "go.buildFlags": [
-    "-v"
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-show-information-expiration": "2025-03-06T12:46:16.101Z",
+    "vs-kubernetes.crd-code-completion": "disabled"
+  },
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
   ],
-  "go.useLanguageServer": true,
-  "go.autocompleteUnimportedPackages": true,
-  "go.testEnvFile": "",
-  "go.toolsManagement.autoUpdate": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[jsonc]": {
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "terminal.integrated.fontLigatures.enabled": true,
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 14,
+  "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "editor.cursorSurroundingLines": 10,
-  "workbench.enableExperiments": false,
-  "explorer.compactFolders": false,
-  "telemetry.telemetryLevel": "off",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.neovimUseConfigFile": true,
-  "explorer.confirmDragAndDrop": false,
-  "editor.tabSize": 4,
-  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-  "editor.wordWrap": "off",
-  "extensions.ignoreRecommendations": true,
-  "editor.guides.indentation": false,
-  "workbench.colorTheme": "Carbonfox",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.editor.enablePreview": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
 }
+
