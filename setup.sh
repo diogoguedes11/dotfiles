@@ -26,6 +26,6 @@ for file in "${dotfiles[@]}"; do
   ln -sf "$DOTFILES_DIR/zsh/$file" "$HOME/$file"
 done
 
-for folder in "${folders[@]}"; do
-  ln -sf "$DOTFILES_DIR/$folder" "$XDG_CONFIG_HOME/$folder"
-done
+#for folder in "${folders[@]}"; do
+#  ln -sf "$DOTFILES_DIR/$folder" "$XDG_CONFIG_HOME/$folder"
+#done
