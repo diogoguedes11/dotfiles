@@ -14,10 +14,7 @@ DOTFILES_DIR="$HOME/Repos/github.com/diogoguedes11/dotfiles"
 #cd ../
 
 dotfiles=(
-  .bash_profile
-  .bashrc
-  .inputrc
-  .tmux.conf
+  .zshrc
 )
 
 folders=(
@@ -26,7 +23,7 @@ folders=(
 )
 
 for file in "${dotfiles[@]}"; do
-  ln -sf "$DOTFILES_DIR/bash/$file" "$HOME/$file"
+  ln -sf "$DOTFILES_DIR/zsh/$file" "$HOME/$file"
 done
 
 for folder in "${folders[@]}"; do

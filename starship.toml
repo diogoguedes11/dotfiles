@@ -1,0 +1,114 @@
+# ~/.config/starship.toml
+
+# Use custom format
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 500
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+
+#format = "$all"
+# Use custom format
+# After new line, the topics appear before the input shell
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$package\
+$terraform\
+$gcloud\
+$aws\
+$nix_shell\
+$env_var\
+$kubernetes\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$memory_usage\
+$time\
+$character\
+"""
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]      # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[➜](bold green)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
+
+[kubernetes]
+disabled = false
+#symbol = "☸ "
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = "🔒"
+read_only_style = "red"
+
+# shows the hostname on new lines
+[hostname]
+ssh_only = false
+disabled = false
+style = "bold italic #87A752"
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+
+[git_branch]
+#symbol = "🌱 "
+truncation_length = 25
+truncation_symbol = "…/"
+
+[helm]
+format = "via [⎈ $version](bold white) "
+
+[terraform]
+format = "[ $symbol$version-$workspace]($style) "
+symbol = "💠"
+detect_extensions = ["tf", "hcl"]
+
+[gcloud]
+format = '[$symbol($project)]($style) '
+#format = 'on [$symbol$account(\($project\))]($style) '
+style = "bold blue"
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+symbol = "☁"
+style = "bold yellow"
+disabled = true
+
+[time]
+format = "at [$time]($style) "
+style = "bold purple"
+disabled = true
+
+
