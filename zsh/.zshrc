@@ -47,6 +47,32 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+export VISUAL=vim
+export EDITOR=vim
+
+# config
+export BROWSER="edge"
+
+# directories
+export REPOS="$HOME/Repos"
+export GITUSER="diogoguedes11"
+export GHREPOS="$REPOS/github.com/$GITUSER"
+export DOTFILES="$GHREPOS/dotfiles"
+export LAB="$GHREPOS/lab"
+export HOMELAB="$GHREPOS/homelab"
+export SCRIPTS="$DOTFILES/scripts"
+export ZETTELKASTEN="$HOME/Zettelkasten/second-brain/"
+export DEVFOLDER="$REPOS/Development/"
+
+# ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+export HISTCONTROL=ignorespace
+
+
+
 # alias
 alias gcb='git checkout -b'
 alias ga='git add .'
@@ -55,11 +81,26 @@ alias gp='git push origin'
 alias gs='git status'
 alias tfa='terraform apply '
 alias tfp='terraform plan'
+alias tfi='terraform init'
+alias tfd='terraform destroy'
 alias v='vim'
 alias gal='gcloud auth login'
 alias gap='gcloud auth application-default login'
 alias gitk='git log --graph'
 
+# Workflow
+alias dot='cd $GHREPOS/dotfiles'
+alias repos='cd $REPOS'
+alias lab="cd $LAB"
+alias homelab="cd $HOMELAB"
+alias ghrepos='cd $GHREPOS'
+alias c="clear"
+alias d="cd $DEVFOLDER"
+
+# ls
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias la='ls -lathr'
 
 # kubectl
 alias k='kubectl'
