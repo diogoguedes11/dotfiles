@@ -2,7 +2,6 @@
   "[terraform]": {
     "editor.formatOnSave": true
   },
-  "markdown-preview-github-styles.colorTheme": "dark",
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "plaintext": true,
@@ -11,7 +10,13 @@
   "github.copilot.advanced": {
     "debug.useElectronFetcher": true
   },
-  "terminal.integrated.defaultProfile.linux": "tmux",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.renderLineHighlight": "line",
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 1,
+  "editor.smoothScrolling": true,
   "editor.cursorWidth": 3,
   "editor.cursorBlinking": "expand",
   "vsicons.dontShowNewVersionMessage": true,
@@ -20,7 +25,6 @@
   "workbench.iconTheme": "vscode-icons",
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.fontFamily": "'FiraCode Nerd Font'",
-  "editor.lineHeight": 0,
   "editor.defaultFormatter": "hashicorp.terraform",
   "python.analysis.inlayHints.functionReturnTypes": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
@@ -107,11 +111,10 @@
   ],
   "terminal.integrated.fontLigatures.enabled": true,
   "editor.fontLigatures": true,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 15,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.editor.enablePreview": false,
   "git.enableSmartCommit": true,
   "git.autofetch": true,
@@ -119,6 +122,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "github.copilot.selectedCompletionModel": "gpt-4o-copilot"
+  "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+  "workbench.colorTheme": "GitHub Dark"
 }
-

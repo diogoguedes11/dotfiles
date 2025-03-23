@@ -67,7 +67,7 @@
     "command": "editor.emmet.action.matchTag"
   },
   {
-    "key": "ctrl+z",
+    "key": "ctrl+shift+z",
     "command": "workbench.action.toggleZenMode"
   },
   {
@@ -79,6 +79,25 @@
     "key": "shift+g",
     "command": "workbench.view.scm",
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k ctrl+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
-
