@@ -26,7 +26,6 @@ if echo "$os" | grep -o "Ubuntu"; then
   # Install starship
   curl -sS https://starship.rs/install.sh | sh
   # Obsidian
-  sudo snap install obsidian --classic
 fi
 else
   echo "Installing in MacOS"

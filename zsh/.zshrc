@@ -49,11 +49,9 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 export VISUAL=vim
 export EDITOR=vim
-
-# config
 export BROWSER="edge"
 
-# directories
+# ========================= DIRS ======================================
 export REPOS="$HOME/Repos"
 export GITUSER="diogoguedes11"
 export GHREPOS="$REPOS/github.com/$GITUSER"
@@ -61,32 +59,38 @@ export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export HOMELAB="$GHREPOS/homelab"
 export SCRIPTS="$DOTFILES/scripts"
-export ZETTELKASTEN="$HOME/Zettelkasten/second-brain/"
 export DEVFOLDER="$REPOS/Development/"
 
-# ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
-
+# ========================= HISTORY  ======================================
 export HISTFILE=~/.histfile
 export HISTSIZE=25000
 export SAVEHIST=25000
 export HISTCONTROL=ignorespace
 
 
+# ============================= ALIAS ============================= 
 
-# alias
+# Git
 alias gcb='git checkout -b'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push origin'
 alias gs='git status'
+# Terraform
 alias tfa='terraform apply '
 alias tfp='terraform plan'
 alias tfi='terraform init'
 alias tfd='terraform destroy'
 alias v='vim'
+# Google Cloud
 alias gal='gcloud auth login'
 alias gap='gcloud auth application-default login'
 alias gitk='git log --graph'
+# Listing files
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias la='ls -lathr'
+
 
 # Workflow
 alias dot='cd $GHREPOS/dotfiles'
@@ -97,10 +101,6 @@ alias ghrepos='cd $GHREPOS'
 alias c="clear"
 alias d="cd $DEVFOLDER"
 
-# ls
-alias ls='ls --color=auto'
-alias ll='ls -la'
-alias la='ls -lathr'
 
 # kubectl
 alias k='kubectl'
@@ -109,11 +109,18 @@ alias kc='kubectx'
 alias kn='kubens'
 alias kgs='kubectl get services'
 
+
+
 eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 eval "$(starship init zsh)"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
-export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/diogo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/diogo/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/diogo/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/diogo/google-cloud-sdk/completion.zsh.inc'; fi
