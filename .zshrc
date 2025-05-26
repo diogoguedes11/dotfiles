@@ -114,13 +114,5 @@ alias kgs='kubectl get services'
 eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 eval "$(starship init zsh)"
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
 export PATH="$HOME/.local/bin:$PATH"
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/diogo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/diogo/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/diogo/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/diogo/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$HOME/.tfenv/bin:$PATH"
