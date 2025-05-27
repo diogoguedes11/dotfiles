@@ -31,22 +31,6 @@ plugins=(
   zsh-syntax-highlighting
 
 )
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fpath=(path/to/zsh-completions/src $fpath)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#pick  enable GPG signing
-export GPG_TTY=$(tty)
-export GPGKEY=EACD6834F234349C
-if [ ! -f ~/.gnupg/S.gpg-agent ]; then
-	eval $( gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf )
-fi
-export GPG_AGENT_INFO=${HOME}/.gnupg/S.gpg-agent:0:1
-
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
 export VISUAL=vim
 export EDITOR=vim
 export BROWSER="edge"

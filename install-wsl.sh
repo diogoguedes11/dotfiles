@@ -49,7 +49,7 @@ fi
 if [ ! -d "$HOME/.fzf" ]; then
     echo "[*] Installing FZF..."
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+    sudo ~/.fzf/install
 else
     echo "[*] FZF is already installed."
 fi
@@ -99,7 +99,6 @@ if [ ! -d "$HOME/google-cloud-sdk" ]; then
     curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
     tar -xf google-cloud-cli-linux-x86_64.tar.gz
     ./google-cloud-sdk/install.sh --quiet
-    source ~/.zshrc
 else
     echo "[*] Google Cloud SDK is already installed."
 fi
@@ -110,18 +109,13 @@ if [ ! -d "$HOME/.tfenv" ]; then
     source ~/.zshrc
 fi
 
-# -- Terraform --
-echo "[*] Installing latest Terraform via tfenv..."
-tfenv install latest
-tfenv use latest
 
 # -- k9s --
 echo "[*] Installing k9s..."
-K9S_VERSION=$(curl -s https://api.github.com/repos/derailed/k9s/releases/latest | grep tag_name | cut -d '"' -f 4)
-curl -Lo k9s.tar.gz "https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_Linux_amd64.tar.gz"
-tar -xzf k9s.tar.gz k9s
+wget k9s.tar.gz https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
+tar -xf k9s_Linux_amd64.tar.gz
 sudo mv k9s /usr/local/bin/
-rm k9s.tar.gz
+rm k9s_Linux_amd64.tar.gz
 
 # Setting up dotfiles
 echo "[*] Setting up dotfiles..."
