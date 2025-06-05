@@ -95,8 +95,8 @@ alias kgs='kubectl get services'
 
 
 
-eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 eval "$(starship init zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

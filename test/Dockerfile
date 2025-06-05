@@ -15,6 +15,7 @@ USER dev
 WORKDIR /home/dev
 
 # Copy your install script into the container
-COPY install-wsl.sh .
+COPY install.sh .
 COPY .zshrc .
+
 

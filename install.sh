@@ -21,7 +21,6 @@ if ! command -v zsh &> /dev/null; then
 else
     echo "[*] ZSH is already installed."
 fi
-
 # -- Oh My Zsh --
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
     echo "[*] Installing Zsh Autosuggestions..."
@@ -44,6 +43,10 @@ if [ ! -d "$HOME/.config/starship.toml" ]; then
 else
     echo "[*] Starship is already installed."
 fi
+
+#  -- HOMEBREW --
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # -- FZF --
 if [ ! -d "$HOME/.fzf" ]; then
@@ -93,66 +96,16 @@ else
     echo "[*] Azure CLI is already installed."
 fi
 
-# -- Google Cloud SDK --
-if [ ! -d "$HOME/google-cloud-sdk" ]; then
-    echo "[*] Installing Google Cloud SDK..."
-    curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
-    tar -xf google-cloud-cli-linux-x86_64.tar.gz
-    ./google-cloud-sdk/install.sh --quiet
-else
-    echo "[*] Google Cloud SDK is already installed."
-fi
 # -- TFEnv --
 if [ ! -d "$HOME/.tfenv" ]; then
     echo "[*] Installing tfenv..."
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv
-    source ~/.zshrc
 fi
 
 
 # -- k9s --
 echo "[*] Installing k9s..."
-wget k9s.tar.gz https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
-tar -xf k9s_Linux_amd64.tar.gz
-sudo mv k9s /usr/local/bin/
-rm k9s_Linux_amd64.tar.gz
-
-# Setting up dotfiles
-echo "[*] Setting up dotfiles..."
-ln -sf "$PWD/.zshrc" "$HOME/.zshrc"
-ln -sf "$PWD/starship.toml" "$HOME/.config/starship.toml"
-
+/home/linuxbrew/.linuxbrew/bin/brew install k9s
 
 
 echo "[✔] All tools installed. Please restart your terminal or run 'exec zsh'"
-
-
-# -- Zettelkasten and Development Repos --
-setup_zettelkasten() {
-
-  echo "Setting up Zettelkasten"
-  mkdir -p ~/Zettelkasten/
-  cd ~/Zettelkasten/
-  git clone git@github.com:diogoguedes11/second-brain.git
-  cd ~
-}
-
-setup_development() {
-
-  echo "Setting up Development"
-  mkdir -p ~/Repos/Development/
-  mkdir -p ~/Repos/github.com/diogoguedes11/
-  cd ~/Repos/github.com/diogoguedes11/
-  git clone https://github.com/diogoguedes11/dotfiles
-  git clone git@github.com:diogoguedes11/lab.git
-  git clone git@github.com:diogoguedes11/diogoguedes11.git
-  git clone git@github.com:diogoguedes11/homelab.git
-  cd ~/Repos/Development/
-  git clone git@github.com:diogoguedes11/cloud-projects.git
-  cd ~
-}
-
-setup_zettelkasten
-setup_development
-
-echo "[✔] Zettelkasten and Development directories set up."
