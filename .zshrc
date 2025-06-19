@@ -100,3 +100,4 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
