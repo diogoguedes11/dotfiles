@@ -51,7 +51,6 @@ export HISTSIZE=25000
 export SAVEHIST=25000
 export HISTCONTROL=ignorespace
 
-
 # ============================= ALIAS ============================= 
 
 # Git
@@ -74,8 +73,6 @@ alias gitk='git log --graph'
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias la='ls -lathr'
-
-
 # Workflow
 alias dot='cd $GHREPOS/dotfiles'
 alias repos='cd $REPOS'
@@ -84,16 +81,12 @@ alias homelab="cd $HOMELAB"
 alias ghrepos='cd $GHREPOS'
 alias c="clear"
 alias d="cd $DEVFOLDER"
-
-
 # kubectl
 alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kc='kubectx'
 alias kn='kubens'
 alias kgs='kubectl get services'
-
-
 
 source <(kubectl completion zsh)
 eval "$(starship init zsh)"
