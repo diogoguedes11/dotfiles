@@ -24,8 +24,7 @@ setup_development() {
   git clone git@github.com:diogoguedes11/cloud-projects.git
   cd ~
 }
-
-# setup_zettelkasten
+# Run the functions
 setup_development
-
 echo "[✔]  Development directories set up."
+
