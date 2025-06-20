@@ -87,7 +87,6 @@ else
     echo "[*] Flux CD is already installed."
 fi
 
-
 # -- Azure CLI --
 if ! command -v az &> /dev/null; then
     echo "[*] Installing Azure CLI..."
@@ -106,6 +105,5 @@ fi
 # -- k9s --
 echo "[*] Installing k9s..."
 /home/linuxbrew/.linuxbrew/bin/brew install k9s
-
 
 echo "[✔] All tools installed. Please restart your terminal or run 'exec zsh'"
