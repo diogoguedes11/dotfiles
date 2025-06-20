@@ -33,9 +33,9 @@ plugins=(
   zsh-syntax-highlighting
 
 )
-export VISUAL=vim
-export EDITOR=vim
-export BROWSER="chrome"
+source $ZSH/oh-my-zsh.sh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 
 # ========================= DIRS ======================================
 export REPOS="$HOME/Repos"
@@ -47,11 +47,9 @@ export HOMELAB="$GHREPOS/homelab"
 export SCRIPTS="$DOTFILES/scripts"
 export DEVFOLDER="$REPOS/Development/"
 
-# ========================= HISTORY  ======================================
-export HISTFILE=~/.histfile
-export HISTSIZE=25000
-export SAVEHIST=25000
-export HISTCONTROL=ignorespace
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # ============================= ALIAS ============================= 
 
@@ -91,7 +89,12 @@ alias kc='kubectx'
 alias kn='kubens'
 alias kgs='kubectl get services'
 
+
 # ========================= PATHS ======================================
+eval "$(direnv hook zsh)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source <(kubectl completion zsh)
 eval "$(starship init zsh)"
 export PATH="$HOME/.local/bin:$PATH"
@@ -99,6 +102,7 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+wd() {
+  . /home/diogo/bin/wd/wd.sh
+}
