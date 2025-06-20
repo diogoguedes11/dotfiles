@@ -29,6 +29,10 @@ else
     echo "[*] Zsh Autosuggestions is already installed."
 fi
 
+# Install wd plugin
+curl -L https://github.com/mfaerevaag/wd/raw/master/install.sh | sh
+
+
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
     echo "[*] Installing Zsh Syntax Highlighting..."
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
