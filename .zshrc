@@ -80,7 +80,7 @@ alias repos='cd $REPOS'
 alias lab="cd $LAB"
 alias homelab="cd $HOMELAB"
 alias ghrepos='cd $GHREPOS'
-alias c="clear"
+alias c="code ."
 alias d="cd $DEVFOLDER"
 # kubectl
 alias k='kubectl'
