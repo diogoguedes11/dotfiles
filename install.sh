@@ -131,6 +131,9 @@ else
     echo "[*] k9s is already installed."
 fi
 
+# -- kubectx --
+sudo aptt install kubectx
+
 echo "[✔] All tools installed."
 echo "Please restart your terminal or run 'exec zsh' for ZSH, Oh My Zsh, and Starship to take effect."
 echo "You may need to add Homebrew to your PATH if not already done."
