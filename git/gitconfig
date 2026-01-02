@@ -1,0 +1,22 @@
+# ==============================================
+
+# GLOBAL SETTINGS
+
+# ==============================================
+
+# Avoid timeouts
+
+Host \*
+ServerAliveInterval 60
+ServerAliveCountMax 30
+
+# ==============================================
+
+# GITHUB - PESSOAL
+
+# ==============================================
+
+Host github.com
+HostName github.com
+User git
+IdentityFile /home/diogo/.ssh/id_ed25519_pessoal

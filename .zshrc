@@ -143,6 +143,14 @@ unset __conda_setup
 # Should be loaded near the end to capture previously set environments.
 eval "$(starship init zsh)"
 
+# Start ssh-agent and add key if not already loaded
+if [ -z "$SSH_AUTH_SOCK" ] || ! ssh-add -l >/dev/null 2>&1; then
+  eval "$(ssh-agent -s)" >/dev/null
+  if [ -f "$HOME/.ssh/id_ed25519" ]; then
+    ssh-add "$HOME/.ssh/id_ed25519" >/dev/null 2>&1
+  fi
+fi
+
 # Ensure core system paths take precedence and remove duplicate PATH entries.
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 typeset -U PATH
