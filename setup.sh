@@ -70,16 +70,7 @@ install_tools() {
 
     if [ "$OS" == "macos" ]; then
         # List of Brew packages
-        PACKAGES=(
-            git wget curl zsh starship fzf bat tree
-            stow jq ripgrep
-            kubernetes-cli helm fluxcd/tap/flux
-            terraform azure-cli gh
-            visual-studio-code iterm2 docker raycast
-            font-jetbrains-mono-nerd-font
-        )
-
-        brew install "${PACKAGES[@]}"
+        brew bundle install --file=Brewfile
 
     elif [ "$OS" == "linux" ]; then
         # Linux specific installation (some tools need manual install or snap)
