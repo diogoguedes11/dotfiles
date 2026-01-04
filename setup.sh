@@ -48,6 +48,14 @@ OS=$(get_os)
 # --- PACKAGE MANAGER SETUP ---
 setup_package_manager() {
     if [ "$OS" == "macos" ]; then
+	# Install Xcode Command Line Tools if not already installed
+	if ! xcode-select -p &>/dev/null; then
+	  echo "Installing Xcode Command Line Tools..."
+	  xcode-select --install
+	  until xcode-select -p &>/dev/null; do
+	    sleep 5
+	  done
+	fi
         if ! command -v brew &> /dev/null; then
             log "Installing Homebrew (macOS)..."
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
