@@ -1,2 +1,11 @@
-font-size = 16
-window-padding-x = 8
+# Tamanho da fonte (o padrão é 12, eu recomendo 14 ou 15 no MacBook)
+font-size =  24
+
+# Usar a fonte que instalaste via Homebrew
+font-family = "JetBrainsMono Nerd Font Mono"
+
+# Se achares a fonte muito "fina" no ecrã retina:
+font-thicken = true
+
+# Tema (Opcional, mas o Ghostty traz centenas. Tenta "catppuccin-mocha" ou "tokyonight")
+theme = "catppuccin-mocha"
