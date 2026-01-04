@@ -1,10 +1,7 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
-
 # Cloud CLI
 brew "awscli"
 brew "azure-cli"
-brew "google-cloud-sdk"
+#brew "gcloud-cli"
 
 # DevOps & Infrastructure
 brew "terraform"
