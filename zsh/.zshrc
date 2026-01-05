@@ -2,9 +2,6 @@
 #  DIOGO GUEDES ZSH CONFIG
 # ==============================================================================
 
-# --- 1. Critical Initialization (Homebrew) ---
-# Must load first to ensure binaries (like starship, nvm, etc.) are available in PATH.
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # --- 2. Oh My Zsh Configuration ---
 export ZSH="$HOME/.oh-my-zsh"
