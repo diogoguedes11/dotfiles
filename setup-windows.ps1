@@ -33,7 +33,6 @@ $apps = @(
   "Microsoft.WindowsTerminal",  # Modern Terminal
   "Microsoft.VisualStudioCode", # Code Editor
   "Microsoft.PowerToys",        # Window Management (FancyZones)
-  "Mozilla.Firefox",            # Browser
   "Git.Git",                    # Git for Windows
   "Docker.DockerDesktop",       # Docker
   "Obsidian.Obsidian"           # Notes
