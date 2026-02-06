@@ -33,7 +33,7 @@ export LC_ALL=en_US.UTF-8
 
 # Personal directory structure definition
 export REPOS="$HOME/Repos"
-export GITUSER="diogoguedes11"
+export GITUSER="dfoguedes"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
